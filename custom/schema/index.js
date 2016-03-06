@@ -33,6 +33,17 @@ module.exports = {
 
             return fields;
     },
+    fields : function(schema){
+        var schema_fields = schema.split(',');
+            var fields = [];
+
+            for (var i = 0; i < schema_fields.length; i++) {
+                var parts = schema_fields[i].split(':');
+                fields.push(parts.shift().trim());
+            }
+
+            return fields;
+    },
     fileNameDatePrefix : function(){
         var date = new Date();
         return date.getFullYear() + '_' + ("0" + (date.getMonth() + 1)).slice(-2) + '_'  + ("0" + date.getDate()).slice(-2) + '_' + date.getTime();
