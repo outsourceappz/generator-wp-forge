@@ -14,9 +14,8 @@ class Create<%= changeCase.title(props.tableName).replace(/ /g, "") %>Table exte
     {
         DB_Capsule::schema()->create('<%= props.tableName %>', function ($table) {
             $table->bigIncrements('id')->unsigned();
-            $table->float('price');
-            $table->string('csv_file');
-            $table->timestamps();
+            <% for(var i = 0; i < props.fields.length; i++) {%><%-  props.fields[i].join('->')  %>;
+            <% } %>$table->timestamps();
             $table->softDeletes();
         });
     }
