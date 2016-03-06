@@ -3,7 +3,7 @@
 use Illuminate\Database\Capsule\Manager as DB_Capsule;
 use Illuminate\Database\Migrations\Migration;
 
-class Create<%= changeCase.title(props.tableName).replace(/ /g, "") %>Table extends Migration
+class Create<%= schemaHelper.camelToClassName(props.tableName) %>Table extends Migration
 {
     /**
      * Run the migrations.
