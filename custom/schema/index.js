@@ -1,6 +1,13 @@
 var changeCase = require('change-case');
+var nconf = require('nconf');
+
+nconf.use('file', { file: './wp-plugin.json' });
+nconf.load();
 
 module.exports = {
+    config: function (){
+        return nconf;
+    },
     transform : function(schema){
             var schema_fields = schema.split(',');
             var fields = [];
