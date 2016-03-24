@@ -52,10 +52,10 @@ module.exports = yeoman.generators.Base.extend({
     this.props.fieldNames = schemaHelper.fields(this.props.schema);
     this.props.namespace = nconf.get('namespace');
 
-    this.template('_model.txt', 'App/Models/'+ this.props.className +  '.php' );
+    this.template('_model.php', 'App/Models/'+ this.props.className +  '.php' );
   },
 
   install: function () {
-    //this.spawnCommand( 'composer', ['dump-autoload'] );
+    this.spawnCommand( 'composer', ['dump-autoload'] );
   }
 });
