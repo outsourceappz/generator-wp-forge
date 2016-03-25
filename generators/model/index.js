@@ -16,25 +16,7 @@ module.exports = yeoman.generators.Base.extend({
     this.loadConfig();
     var done = this.async();
 
-    var prompts = [{
-      type: 'text',
-      name: 'className',
-      message: 'Class Name?',
-      default: 'User'
-    },
-    {
-      type: 'text',
-      name: 'tableName',
-      message: 'Table Name?',
-      default: 'users'
-    },
-    {
-      type: 'text',
-      name: 'schema',
-      message: 'Table schema?',
-      default: 'username:string,email:string:unique'
-    }
-    ];
+    var prompts = [];
 
     this.prompt(prompts, function (props) {
       this.props = props;
@@ -46,6 +28,7 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     var date = new Date();
+    this.props = this.options;
     this.schemaHelper = schemaHelper;
     this.props.tableName = changeCase.snake(this.props.tableName);
     this.props.fields = schemaHelper.transform(this.props.schema);

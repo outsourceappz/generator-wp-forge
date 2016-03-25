@@ -10,19 +10,7 @@ module.exports = yeoman.generators.Base.extend({
   prompting: function () {
     var done = this.async();
 
-    var prompts = [{
-      type: 'text',
-      name: 'tableName',
-      message: 'Database table name?',
-      default: 'custom_table_name'
-    },
-    {
-      type: 'text',
-      name: 'schema',
-      message: 'Table schema?',
-      default: 'username:string,email:string:unique'
-    }
-    ];
+    var prompts = [];
 
     this.prompt(prompts, function (props) {
       this.props = props;
@@ -34,6 +22,7 @@ module.exports = yeoman.generators.Base.extend({
 
   writing: function () {
     var date = new Date();
+    this.props = this.options;
     this.schemaHelper = schemaHelper;
     this.props.tableName = changeCase.snake(this.props.tableName);
     this.props.fields = schemaHelper.transform(this.props.schema);
