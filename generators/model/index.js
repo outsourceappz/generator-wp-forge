@@ -39,6 +39,6 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.spawnCommand( 'composer', ['dump-autoload'] );
+    // this.spawnCommand( 'composer', ['dump-autoload'] );
   }
 });
