@@ -1,10 +1,10 @@
 # WP Forge
 
-**NOTE: This build would be considered ALPHA. WordPress plugin generated using this tool has been used in production environment.**
+**NOTE: This build would be considered ALPHA. Having said that, WordPress plugins and other generated code using this tool has been used in production environment.**
 
 An opinionated scaffolding tool for creating modern WordPress plugin.
 
-It helps you kickstart new WordPress plugin, prescribing best practices and to help you stay productive. Not to say the least, it saves tons of man hours upfront.
+It helps you kickstart new WordPress plugin, prescribing best practices and to help you stay productive. Not to say the least, it saves tons of man hours upfront and during the course of development.
 
 The following functionality is provided out-of-the-box.
 
