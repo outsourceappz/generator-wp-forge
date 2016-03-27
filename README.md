@@ -26,6 +26,7 @@ First, install [Yeoman](http://yeoman.io) and generator-wp-forge using [npm](htt
 ```bash
 npm install -g yo
 git clone git@github.com:outsourceappz/generator-wp-make && cd generator-wp-make
+npm install
 npm link
 ```
 
