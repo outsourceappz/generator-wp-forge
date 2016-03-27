@@ -1,0 +1,33 @@
+{
+  "name": "<%- props.pluginSlug %>",
+  "description": "<%- props.pluginDescription %>",
+  "version": "0.0.1",
+  "type": "wordpress-plugin",
+  "keywords": [],
+  "homepage": "<%- props.pluginURI %>",
+  "license": "GPLv2.0+",
+  "authors": [
+    {
+      "name": "<%- props.author %>",
+      "email": "<%- props.email %>",
+      "homepage": "<%- props.authorURI %>",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4",
+    "pimple/pimple": "^3.0",
+    "illuminate/database": "5.0.33",
+    "illuminate/pagination": "5.0.33",
+    "illuminate/validation": "5.0.33",
+    "league/fractal": "^0.13.0",
+    "symfony/var-dumper": "^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "<%- props.appName %>\\": "<%- props.appName %>"
+    }
+  },
+  "require-dev": {}
+}
