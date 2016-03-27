@@ -1,6 +1,6 @@
-# WP Forge
+![WP Forge](logo.png)
 
-**NOTE: This build would be considered ALPHA. Having said that, WordPress plugins and other generated code using this tool has been used in production environment.**
+**NOTE: This build would be considered ALPHA. Having said that, WordPress plugins and other generated code using this tool has been used in production environment. Needs better documentation which is in the pipelines via a series of blog posts.s**
 
 An opinionated scaffolding tool for creating modern WordPress plugin.
 
